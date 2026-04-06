@@ -123,14 +123,12 @@ body.page-3 .success-card .success-subtitle {
 }
 
 h1 {
-    color: #333;
     font-size: 28px;
     margin-bottom: 10px;
     text-align: center;
 }
 
 .subtitle {
-    color: #666;
     text-align: center;
     margin-bottom: 30px;
     font-size: 14px;
@@ -149,7 +147,6 @@ h1 {
 label {
     display: block;
     margin-bottom: 8px;
-    color: #333;
     font-weight: 500;
     font-size: 14px;
 }
@@ -317,13 +314,42 @@ body.page-3 .country-code {
 
 .dropdown-arrow {
     margin-left: auto;
-    color: #666;
     font-size: 10px;
     transition: transform 0.3s ease;
 }
 
+/* Page 1 dropdown arrow */
+body.page-1 .dropdown-arrow {
+    color: #4a5568;
+}
+
+/* Page 2 dropdown arrow */
+body.page-2 .dropdown-arrow {
+    color: #4a5568;
+}
+
+/* Page 3 dropdown arrow */
+body.page-3 .dropdown-arrow {
+    color: #a0a0b0;
+}
+
 .country-selector:hover .dropdown-arrow {
     transform: translateY(2px);
+}
+
+/* Page 1 dropdown arrow hover */
+body.page-1 .country-selector:hover .dropdown-arrow {
+    color: #667eea;
+}
+
+/* Page 2 dropdown arrow hover */
+body.page-2 .country-selector:hover .dropdown-arrow {
+    color: #00d4ff;
+}
+
+/* Page 3 dropdown arrow hover */
+body.page-3 .country-selector:hover .dropdown-arrow {
+    color: #ff006e;
 }
 
 .phone-number-input {
@@ -371,6 +397,65 @@ body.page-1 .country-item:hover {
     background: rgba(90, 110, 145, 0.3);
 }
 
+/* Page 2 dropdown */
+body.page-2 .country-dropdown {
+    background: rgba(15, 50, 80, 0.95);
+    border: 2px solid rgba(0, 180, 220, 0.4);
+}
+
+body.page-2 .country-search {
+    background: rgba(20, 60, 90, 0.5);
+    border-bottom: 1px solid rgba(0, 180, 220, 0.3);
+}
+
+body.page-2 .country-search input {
+    background: rgba(255, 255, 255, 0.85);
+    color: #0a2540;
+}
+
+body.page-2 .country-name {
+    color: #e0f7ff;
+}
+
+body.page-2 .country-item:hover {
+    background: rgba(0, 180, 220, 0.2);
+}
+
+body.page-2 .country-code-text {
+    color: #00d4ff;
+    background: rgba(0, 180, 220, 0.15);
+}
+
+/* Page 3 dropdown */
+body.page-3 .country-dropdown {
+    background: rgba(25, 20, 35, 0.95);
+    border: 2px solid rgba(200, 50, 150, 0.4);
+}
+
+body.page-3 .country-search {
+    background: rgba(35, 30, 45, 0.5);
+    border-bottom: 1px solid rgba(200, 50, 150, 0.3);
+}
+
+body.page-3 .country-search input {
+    background: rgba(45, 40, 55, 0.6);
+    color: #ffffff;
+    border-color: rgba(200, 50, 150, 0.3);
+}
+
+body.page-3 .country-name {
+    color: #ffffff;
+}
+
+body.page-3 .country-item:hover {
+    background: rgba(200, 50, 150, 0.2);
+}
+
+body.page-3 .country-code-text {
+    color: #ff006e;
+    background: rgba(200, 50, 150, 0.15);
+}
+
 .country-search {
     padding: 15px;
 }
@@ -401,15 +486,11 @@ body.page-1 .country-item:hover {
     padding: 12px 15px;
     cursor: pointer;
     transition: background 0.2s ease;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid rgba(240, 240, 240, 0.1);
 }
 
 .country-item:last-child {
     border-bottom: none;
-}
-
-.country-item:hover {
-    background: #f8f9ff;
 }
 
 .country-flag-small {
@@ -423,18 +504,21 @@ body.page-1 .country-item:hover {
 
 .country-name {
     flex: 1;
-    color: #333;
     font-size: 14px;
     font-weight: 500;
 }
 
 .country-code-text {
-    color: #666;
     font-size: 13px;
     font-weight: 600;
-    background: #f0f0f0;
     padding: 4px 8px;
     border-radius: 4px;
+}
+
+/* Page 1 country code text */
+body.page-1 .country-code-text {
+    color: #4a5568;
+    background: rgba(226, 232, 240, 0.6);
 }
 
 /* Scrollbar styling */
@@ -443,17 +527,17 @@ body.page-1 .country-item:hover {
 }
 
 .country-list::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: rgba(50, 60, 85, 0.3);
     border-radius: 10px;
 }
 
 .country-list::-webkit-scrollbar-thumb {
-    background: #667eea;
+    background: rgba(102, 126, 234, 0.6);
     border-radius: 10px;
 }
 
 .country-list::-webkit-scrollbar-thumb:hover {
-    background: #5568d3;
+    background: rgba(102, 126, 234, 0.8);
 }
 
 .submit-btn {
@@ -519,7 +603,6 @@ body.page-1 .alert-error {
 }
 
 .email-sent {
-    color: #667eea;
     font-weight: 500;
     margin-bottom: 20px;
 }
@@ -538,7 +621,6 @@ body.page-1 .alert-error {
 }
 
 .resend-section p {
-    color: #666;
     font-size: 14px;
     margin-bottom: 10px;
 }
@@ -627,12 +709,12 @@ body.page-2 .resend-section p {
     top: 20px;
     font-size: 28px;
     font-weight: bold;
-    color: #aaa;
+    color: #80a0b0;
     cursor: pointer;
 }
 
 .close-modal:hover {
-    color: #000;
+    color: #00d4ff;
 }
 
 .modal-icon {
@@ -641,7 +723,6 @@ body.page-2 .resend-section p {
 }
 
 .modal-content h2 {
-    color: #c33;
     margin-bottom: 10px;
 }
 
@@ -684,16 +765,19 @@ body.page-2 .resend-section p {
 }
 
 .success-title {
-    color: #667eea;
     font-size: 36px;
     margin-bottom: 15px;
 }
 
 .success-message {
-    color: #333;
     font-size: 24px;
     margin-bottom: 30px;
     font-weight: 500;
+}
+
+/* Page 3 success message */
+body.page-3 .success-message {
+    color: #e0e5f0;
 }
 
 .success-animation {
@@ -722,7 +806,6 @@ body.page-2 .resend-section p {
 }
 
 .success-subtitle {
-    color: #666;
     margin-bottom: 30px;
 }
 
