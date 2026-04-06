@@ -259,10 +259,3 @@ For production deployment:
 - Safari (latest)
 - Edge (latest)
 
-## License
-
-MIT License - Feel free to use this project for personal or commercial purposes.
-
-## Support
-
-For issues or questions, please check the console logs for error messages.
