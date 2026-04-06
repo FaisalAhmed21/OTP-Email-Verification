@@ -37,11 +37,78 @@ body.page-3 {
 }
 
 .form-card, .otp-card, .success-card {
-    background: white;
     border-radius: 20px;
     padding: 40px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     animation: slideUp 0.5s ease-out;
+}
+
+/* Page 1 - Dark Navy Background - Blended navy container */
+body.page-1 .form-card {
+    background: rgba(55, 65, 90, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(90, 110, 145, 0.3);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5), 0 0 100px rgba(100, 120, 160, 0.1);
+}
+
+body.page-1 .form-card h1,
+body.page-1 .form-card label {
+    color: #e8edf5;
+}
+
+body.page-1 .form-card .subtitle,
+body.page-1 .form-card p {
+    color: #b8c5db;
+}
+
+/* Page 2 - Deep Blue with Cyan - Integrated blue container */
+body.page-2 .otp-card {
+    background: rgba(15, 50, 80, 0.70);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 180, 220, 0.4);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6), 0 0 80px rgba(0, 212, 255, 0.15);
+}
+
+body.page-2 .otp-card h1,
+body.page-2 .otp-card .otp-icon {
+    color: #e0f7ff;
+}
+
+body.page-2 .otp-card .subtitle,
+body.page-2 .otp-card p {
+    color: #a0d5e8;
+}
+
+body.page-2 .otp-card .email-sent {
+    color: #00d4ff;
+}
+
+/* Page 3 - Black with Pink/Cyan Gradient - Dark blended container */
+body.page-3 .success-card {
+    background: rgba(25, 20, 35, 0.80);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(200, 50, 150, 0.3);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.7),
+                0 0 100px rgba(255, 0, 110, 0.2),
+                0 0 100px rgba(0, 212, 255, 0.15);
+}
+
+body.page-3 .success-card h1,
+body.page-3 .success-card h2 {
+    color: #ffffff;
+}
+
+body.page-3 .success-card .success-title {
+    background: linear-gradient(135deg, #ff006e 0%, #00d4ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+body.page-3 .success-card .success-subtitle {
+    color: #c0c5d0;
 }
 
 @keyframes slideUp {
@@ -102,6 +169,57 @@ textarea {
     font-family: inherit;
 }
 
+/* Page 1 inputs */
+body.page-1 input[type="text"],
+body.page-1 input[type="email"],
+body.page-1 input[type="tel"],
+body.page-1 input[type="number"],
+body.page-1 select,
+body.page-1 textarea {
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(180, 200, 230, 0.3);
+    color: #2d3748;
+}
+
+body.page-1 input::placeholder,
+body.page-1 textarea::placeholder {
+    color: #8895a7;
+}
+
+/* Page 2 inputs */
+body.page-2 input[type="text"],
+body.page-2 input[type="email"],
+body.page-2 input[type="tel"],
+body.page-2 input[type="number"],
+body.page-2 select,
+body.page-2 textarea {
+    background: rgba(255, 255, 255, 0.85);
+    border: 2px solid rgba(0, 180, 220, 0.3);
+    color: #0a2540;
+}
+
+body.page-2 input::placeholder,
+body.page-2 textarea::placeholder {
+    color: #6b8fa3;
+}
+
+/* Page 3 inputs */
+body.page-3 input[type="text"],
+body.page-3 input[type="email"],
+body.page-3 input[type="tel"],
+body.page-3 input[type="number"],
+body.page-3 select,
+body.page-3 textarea {
+    background: rgba(45, 40, 55, 0.6);
+    border: 2px solid rgba(200, 50, 150, 0.3);
+    color: #ffffff;
+}
+
+body.page-3 input::placeholder,
+body.page-3 textarea::placeholder {
+    color: #9a95a5;
+}
+
 input:focus,
 select:focus,
 textarea:focus {
@@ -131,17 +249,55 @@ textarea {
     align-items: center;
     gap: 8px;
     padding: 12px;
-    border: 2px solid #e0e0e0;
     border-radius: 8px;
-    background: white;
     cursor: pointer;
     transition: all 0.3s ease;
     width: 100%;
 }
 
-.country-selector:hover {
+/* Page 1 country selector */
+body.page-1 .country-selector {
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(180, 200, 230, 0.3);
+}
+
+body.page-1 .country-selector:hover {
     border-color: #667eea;
-    background: #f8f9ff;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+body.page-1 .country-code {
+    color: #2d3748;
+}
+
+/* Page 2 country selector */
+body.page-2 .country-selector {
+    background: rgba(255, 255, 255, 0.85);
+    border: 2px solid rgba(0, 180, 220, 0.3);
+}
+
+body.page-2 .country-selector:hover {
+    border-color: #00d4ff;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+body.page-2 .country-code {
+    color: #0a2540;
+}
+
+/* Page 3 country selector */
+body.page-3 .country-selector {
+    background: rgba(45, 40, 55, 0.6);
+    border: 2px solid rgba(200, 50, 150, 0.3);
+}
+
+body.page-3 .country-selector:hover {
+    border-color: #ff006e;
+    background: rgba(55, 50, 65, 0.7);
+}
+
+body.page-3 .country-code {
+    color: #ffffff;
 }
 
 .country-flag {
@@ -155,7 +311,6 @@ textarea {
 
 .country-code {
     font-weight: 600;
-    color: #333;
     font-size: 14px;
     flex-shrink: 0;
 }
@@ -181,10 +336,10 @@ textarea {
     top: calc(100% + 5px);
     left: 0;
     min-width: 320px;
-    background: white;
-    border: 2px solid #e0e0e0;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     z-index: 1000;
     max-height: 400px;
     overflow: hidden;
@@ -192,10 +347,32 @@ textarea {
     flex-direction: column;
 }
 
+/* Page 1 dropdown */
+body.page-1 .country-dropdown {
+    background: rgba(55, 65, 90, 0.95);
+    border: 2px solid rgba(90, 110, 145, 0.4);
+}
+
+body.page-1 .country-search {
+    background: rgba(70, 80, 105, 0.5);
+    border-bottom: 1px solid rgba(90, 110, 145, 0.3);
+}
+
+body.page-1 .country-search input {
+    background: rgba(255, 255, 255, 0.9);
+    color: #2d3748;
+}
+
+body.page-1 .country-name {
+    color: #e8edf5;
+}
+
+body.page-1 .country-item:hover {
+    background: rgba(90, 110, 145, 0.3);
+}
+
 .country-search {
     padding: 15px;
-    border-bottom: 1px solid #e0e0e0;
-    background: #f8f9ff;
 }
 
 .country-search input {
@@ -319,9 +496,16 @@ textarea {
 }
 
 .alert-error {
-    background-color: #fee;
-    color: #c33;
-    border: 1px solid #fcc;
+    background-color: rgba(255, 100, 100, 0.2);
+    color: #ffa0a0;
+    border: 1px solid rgba(255, 100, 100, 0.4);
+}
+
+/* Page 1 alert */
+body.page-1 .alert-error {
+    background-color: rgba(255, 100, 100, 0.15);
+    color: #ffb3b3;
+    border: 1px solid rgba(255, 100, 100, 0.3);
 }
 
 /* OTP Page Styles */
@@ -361,7 +545,6 @@ textarea {
 
 .resend-btn {
     background: transparent;
-    color: #667eea;
     border: 2px solid #667eea;
     padding: 10px 20px;
     border-radius: 6px;
@@ -370,9 +553,19 @@ textarea {
     transition: all 0.3s ease;
 }
 
-.resend-btn:hover {
-    background: #667eea;
-    color: white;
+/* Page 2 resend button */
+body.page-2 .resend-btn {
+    color: #00d4ff;
+    border-color: #00d4ff;
+}
+
+body.page-2 .resend-btn:hover {
+    background: #00d4ff;
+    color: #0a2540;
+}
+
+body.page-2 .resend-section p {
+    color: #a0d5e8;
 }
 
 /* Modal Styles */
@@ -394,7 +587,10 @@ textarea {
 }
 
 .modal-content {
-    background-color: white;
+    background: rgba(15, 50, 80, 0.92);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(0, 180, 220, 0.4);
     margin: 15% auto;
     padding: 40px;
     border-radius: 15px;
@@ -403,6 +599,15 @@ textarea {
     text-align: center;
     animation: slideDown 0.3s ease;
     position: relative;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.7), 0 0 80px rgba(0, 212, 255, 0.2);
+}
+
+.modal-content h2 {
+    color: #ff6b6b;
+}
+
+.modal-content p {
+    color: #a0d5e8;
 }
 
 @keyframes slideDown {
@@ -447,7 +652,7 @@ textarea {
 
 .modal-btn {
     padding: 12px 30px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #00d4ff 0%, #0088cc 100%);
     color: white;
     border: none;
     border-radius: 8px;
@@ -458,7 +663,7 @@ textarea {
 
 .modal-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);
 }
 
 /* Success Page Styles */
@@ -524,7 +729,6 @@ textarea {
 .home-btn {
     padding: 12px 30px;
     background: transparent;
-    color: #667eea;
     border: 2px solid #667eea;
     border-radius: 8px;
     font-weight: 600;
@@ -532,8 +736,14 @@ textarea {
     transition: all 0.3s ease;
 }
 
-.home-btn:hover {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+/* Page 3 home button */
+body.page-3 .home-btn {
+    color: #00d4ff;
+    border: 2px solid #00d4ff;
+}
+
+body.page-3 .home-btn:hover {
+    background: linear-gradient(135deg, #ff006e 0%, #00d4ff 100%);
     color: white;
     border-color: transparent;
 }
